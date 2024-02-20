@@ -27,11 +27,13 @@ $nombre=$id."_ticket.pdf";
 	   echo "PDF: ".$ticket;
 	  
 		if(isset($_GET['servidor1'])){
-		 exec('lpr -S '.$servidor1.' -P '.$impresora1.' "'.$ruta.'" ');
+		 //exec('lpr -S '.$servidor1.' -P '.$impresora1.' "'.$ruta.'" ');
+		 exec('PDFtoPrinter.exe "'.$ruta.'" "'.$impresora1.'"  ');
 		}
 
 		if(isset($_GET['servidor2'])){
-			exec('lpr -S '.$servidor2.' -P '.$impresora2.' "'.$ruta.'" -o media=A4,size=portrait');
+			//exec('lpr -S '.$servidor2.' -P '.$impresora2.' "'.$ruta.'" ');
+		 exec('PDFtoPrinter.exe "'.$ruta.'" "'.$impresora2.'"  ');
 		}
 
 	}else{
