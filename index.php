@@ -26,14 +26,14 @@ $nombre=$id."_ticket.pdf";
 	   echo $ruta."<br>";
 	   echo "PDF: ".$ticket;
 	  
-		if(isset($_GET['servidor1'])){
+		if($_GET['impresora1']!=""){
 		 //exec('lpr -S '.$servidor1.' -P '.$impresora1.' "'.$ruta.'" ');
-		 exec('PDFtoPrinter.exe "'.$ruta.'" "'.$impresora1.'"  ');
+		 exec('PDFtoPrinter.exe '.$ruta.' "'.$impresora1.'"  ');
 		}
 
-		if(isset($_GET['servidor2'])){
+		if($_GET['impresora12']!=""){
 			//exec('lpr -S '.$servidor2.' -P '.$impresora2.' "'.$ruta.'" ');
-		 exec('PDFtoPrinter.exe "'.$ruta.'" "'.$impresora2.'"  ');
+		 exec('PDFtoPrinter.exe '.$ruta.' "'.$impresora2.'"  ');
 		}
 
 	}else{
