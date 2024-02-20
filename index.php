@@ -12,7 +12,7 @@ $nombre=$id.".pdf";
  
  if(isset($_GET['id_venta'])){
 	 // a route is created, (it must already be created in its repository(pdf)).
-	$ruta    = "ticket/".$name;
+	$ruta    = "ticket/".$nombre;
 
 	// decode base64
 	$pdf_b64 = base64_decode($ticket);
@@ -22,11 +22,11 @@ $nombre=$id.".pdf";
 	    //just to force download by the browser
 	   echo "Guardado correctamente";  
 		if(isset($_GET['servidor1'])){
-
+		 exec("lpr -S ".$servidor1." -P ".$impresora1." ".$ruta);
 		}
 
 		if(isset($_GET['servidor2'])){
-			
+			 exec("lpr -S ".$servidor2." -P ".$impresora2." ".$ruta);
 		}
 
 	}else{
