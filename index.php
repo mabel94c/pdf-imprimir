@@ -31,7 +31,7 @@ $nombre=$id."_ticket.pdf";
 		 exec('PDFtoPrinter.exe '.$ruta.' "'.$impresora1.'"  ');
 		}
 
-		if($_GET['impresora12']!=""){
+		if($_GET['impresora2']!=""){
 			//exec('lpr -S '.$servidor2.' -P '.$impresora2.' "'.$ruta.'" ');
 		 exec('PDFtoPrinter.exe '.$ruta.' "'.$impresora2.'"  ');
 		}
