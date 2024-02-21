@@ -3,7 +3,7 @@
 
  
 $id = $_GET['id_venta'];
-$ticket = $_GET['ticket'];
+$ticket = $_POST['ticket'];
 $impresora1 = $_GET['impresora1'];
 $impresora2 = $_GET['impresora2'];
 $servidor1 = $_GET['servidor1'];
