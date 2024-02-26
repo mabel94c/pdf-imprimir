@@ -1,6 +1,6 @@
 
 <?php
-
+header('Access-Control-Allow-Origin: *');
  
 $id = $_GET['id_venta'];
 $ticket = $_POST['ticket'];
