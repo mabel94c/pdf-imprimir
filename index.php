@@ -50,6 +50,7 @@ $nombre_factura_rollo=$id."_factura_rollo.pdf";
 		if($_GET['impresora1']!=""){
 		 //exec('lpr -S '.$servidor1.' -P '.$impresora1.' "'.$ruta.'" ');
 		 exec('PDFtoPrinter.exe '.$ruta.' "'.$impresora1.'"  ');
+		 //exec('SumatraPDF.exe -print-to '.'"'.$impresora1.'" '.$ruta);
 		}
 
 	}else{
